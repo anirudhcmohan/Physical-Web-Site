@@ -16,7 +16,7 @@
 
   <link href='https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow:700,400|Open+Sans:400,800,700' rel='stylesheet' type='text/css'>
 
-  <link type="text/css" rel="stylesheet" href="/Physical-Web-Site/assets/style-5dd3daab7a1d7ca15cb2d1dbe26b0b46a69dbe4a7ab5acda396978a773447c14.css">
+  <link type="text/css" rel="stylesheet" href="/Physical-Web-Site/assets/style-54a1a62eb966908cde2dafd66bce6bb328805f054074b22d31d9d066da5a1185.css">
   <script type="text/javascript" src="/Physical-Web-Site/assets/main-d8eae8b3fad50318b9171cc9f62d8a553b56059a1163874194b5fe7ffde3df8a.js"></script>
   <script type="text/javascript" src="/Physical-Web-Site/assets/analytics-b4a67de5639c90512b4ab9fd94d04571ead938d7a98e9a49d85cf6ad8cb640c7.js"></script>
 </head>
@@ -46,48 +46,48 @@
   <div class="row">
     <div id="sidenav">
       <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#physical-web-how-to-get-started-as-a-developer">Physical Web: How to Get Started as a Developer</a></li>
-<li class="toc-entry toc-h2"><a href="#who-this-applies-to">Who This Applies To</a></li>
+<li class="toc-entry toc-h2"><a href="#getting-started-guide">Getting started guide</a></li>
+<li class="toc-entry toc-h2"><a href="#who-this-applies-to">Who this applies to</a></li>
 <li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
 <li class="toc-entry toc-h2"><a href="#bluetooth-low-energy-ble-beacons">Bluetooth Low Energy (BLE) Beacons</a></li>
 <li class="toc-entry toc-h2"><a href="#url">URL</a></li>
 <li class="toc-entry toc-h2"><a href="#transmission-power">Transmission Power</a></li>
 <li class="toc-entry toc-h2"><a href="#advertising-frequency">Advertising Frequency</a></li>
-<li class="toc-entry toc-h2"><a href="#deploying-beacons">Deploying Beacons</a></li>
+<li class="toc-entry toc-h2"><a href="#deploying-beacons">Deploying beacons</a></li>
 <li class="toc-entry toc-h3"><a href="#1-beacon-1-url">1 Beacon, 1 Url</a></li>
 <li class="toc-entry toc-h3"><a href="#many-beacons-1-url">Many beacons, 1 URL</a></li>
 <li class="toc-entry toc-h3"><a href="#many-beacons-many-urls">Many beacons, many URLs</a></li>
 <li class="toc-entry toc-h2"><a href="#managing-content">Managing content</a></li>
-<li class="toc-entry toc-h3"><a href="#yourls">YOURLS</a></li>
 </ul>
     </div>
     <div class="main">
       <div class="container">
         <div class="content">
           <h2>
-<a id="physical-web-how-to-get-started-as-a-developer" class="anchor" href="#physical-web-how-to-get-started-as-a-developer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Physical Web: How to Get Started as a Developer</h2>
-<p>If you have any questions, please reach out to <a href="mailto:animohan@google.com">animohan@google.com</a> or <a href="mailto:physical-web-discuss@googlegroups.com">physical-web-discuss@googlegroups.com</a>.</p>
+<a id="getting-started-guide" class="anchor" href="#getting-started-guide" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting started guide</h2>
+<p>Reach out to <a href="mailto:physical-web-discuss@googlegroups.com">physical-web-discuss@googlegroups.com</a> with any questions.</p>
 
 <h2 id="who">
-<a id="who-this-applies-to" class="anchor" href="#who-this-applies-to" aria-hidden="true"><span class="octicon octicon-link"></span></a>Who This Applies To</h2>
+<a id="who-this-applies-to" class="anchor" href="#who-this-applies-to" aria-hidden="true"><span class="octicon octicon-link"></span></a>Who this applies to</h2>
 <p>This guide is meant to be a tutorial for developers who are interested in the Physical Web and would like to deploy it to their users. </p>
 
 <h2 id="intro">
 <a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
-<p>The vision of the Physical Web is to enable users to discover useful nearby web pages with their phones. For example, users could walk into a museum and learn more about the exhibits in front of them by being surfaced the relevant web pages. Alternately, users can easily pay for parking by walking by a parking meter and discovering the relevant payment page.</p> 
 <p>To distribute your web page over the Physical Web, you need two things: (1) a bluetooth low energy beacon (the backbone of the Physical Web) and (2) a URL. Depending on how beacons are configured and how many are used, various deployment options are possible. This guide will walk through these different options -- starting from a basic single beacon deployment and transitioning into a more complex multi-beacon, multi-URL deployment.</p>
 
 <h2 id="bluetooth">
 <a id="bluetooth-low-energy-ble-beacons" class="anchor" href="#bluetooth-low-energy-ble-beacons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bluetooth Low Energy (BLE) Beacons</h2>
 <p>BLE beacons are low powered devices that unidirectionally broadcast data for applications and devices to use. The Physical Web is built on top of beacons that broadcast over the Eddystone protocol. You can find a list of Eddystone-supported beacons here for your deployment.</p>
-<p>When you purchase your beacons, the manufacturer will recommend an application that can connect to the beacons and configure them. Below are the major configuration parameters that you can change for each beacon:</p>
+<p>When you purchase your beacons, the manufacturer will recommend an application that can connect to the beacons and configure them. Below are the major configuration parameters that you can change for each beacon.</p>
 <div class="panel">
   <h2>
 <a id="url" class="anchor" href="#url" aria-hidden="true"><span class="octicon octicon-link"></span></a>URL</h2>
   <p>This is the link to your webpage. The Physical Web on Chrome only supports HTTPS URLs. We recommend the URLs to have the following attributes to provide the best possible user experience:</p>
-  <p>Mobile-optimized, both for the user interface and navigation.</p>
-  <p>Single-purpose. Each should should cater to a single action (e.g. consume a piece of content, perform an action). Remember that users won’t be browsing to this page but instead will be arriving directly to it if they are nearby your beacon.</p>
-  <p>The Eddystone protocol provides 18 bytes for the URL packet, so you will likely need a URL shortener to compress the byte size of your URL if the beacon configuration application doesn’t automatically have one. If you anticipate needing to change your broadcast URLs frequently over time, consider using a URL shortener that allows you to update the end URLs later.</p>
+  <ul>
+    <li>Mobile-optimized, both for the user interface and navigation.</li>
+    <li>Single-purpose. Each should should cater to a single action (e.g. consume a piece of content, perform an action). Remember that users won’t be browsing to this page but instead will be arriving directly to it if they are nearby your beacon.</li>
+  </ul>
+  <p>The Eddystone protocol provides 17 bytes for the URL packet, so you will likely need a URL shortener to compress the byte size of your URL if the beacon configuration application doesn’t automatically have one. If you anticipate needing to change your broadcast URLs frequently over time, consider using a URL shortener that allows you to update the end URLs later.</p>
 </div>
 <div class="panel">
   <h2>
@@ -95,8 +95,10 @@
   <p>Beacons can vary their transmission power, typically from -40dbm to +4dbm. Note that power is a rough proxy for the transmission distance, which is ultimately a function of beacon antenna, phone antenna, beacon placement, and more. Our suggestions below are therefore rough guidelines.</p>
   <p>In general, we recommend setting the transmission power to be low, typically between -30db and -35db.</p>
   <p>This has 2 advantages:</p>
-  <p>it prolongs the beacon’s battery life</p>
-  ensures that users see your broadcast URL only when they are close to your device (thereby making your content more contextual).
+  <ul>
+    <li>It prolongs the beacon’s battery life. </li>
+    <li>It ensures that users see your broadcast URL only when they are close to your device (thereby making your content more contextual). </li>
+  </ul>
   <p>However, there are certain situations where a higher transmission power may be desired such as covering a large space with a single URL.</p>
 </div>
 <div class="panel">
@@ -104,11 +106,11 @@
 <a id="advertising-frequency" class="anchor" href="#advertising-frequency" aria-hidden="true"><span class="octicon octicon-link"></span></a>Advertising Frequency</h2>
   <p>As a general rule, we recommend an advertising frequency of 700ms. 
   </p>
-<p>Most beacons can advertise in a range from as fast as every 100ms to as slow as every 10 seconds. You can go slower to save battery but scanning applications such as Chrome may not reliably surface your URLs to users if the frequency is much slower than 1 second. You can certainly go faster than 700ms, you’ll just waste battery life and increase the chance for collisions in busy beacon spaces.</p>
+<p>Most beacons can advertise in a range from as fast as every 100ms to as slow as every 10 seconds. Going slower can save battery life but scanning applications such as Chrome may not reliably surface URLs to users if the frequency is much slower than 1 second. Going faster than 700ms is possible too, although this will reduce the beacon's battery life.</p>
 </div>
 
 <h2 id="deploying">
-<a id="deploying-beacons" class="anchor" href="#deploying-beacons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deploying Beacons</h2>
+<a id="deploying-beacons" class="anchor" href="#deploying-beacons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deploying beacons</h2>
 <p>The complexity of your deployment will depend on how many beacons you’ll deploy and how many distinct URLs you plan to broadcast. Below, we summarize the different deployment options and which use cases they typically pertain to.</p>
 <div class="break-60 center-block">
   <img src="/Physical-Web-Site/assets/images/beacon-graphic-0213cc2231cb5c3401c4ef9537ce7331ce30b846aedfdda84395d572241704e3.svg" alt="Deploying Beacons Infographic">
@@ -137,8 +139,6 @@
 <a id="managing-content" class="anchor" href="#managing-content" aria-hidden="true"><span class="octicon octicon-link"></span></a>Managing content</h2>
 <p>For certain deployments, you might want to change the broadcast URLs after initial configuration. One example is a large retailer that has deployed beacons across a variety of stores and wants to continually update the broadcast URLs regularly to reflect new content. While it is possible for you to continually re-configure the beacons with a new URL, it requires you to be within bluetooth broadcast range.</p>
 
-<h3>
-<a id="yourls" class="anchor" href="#yourls" aria-hidden="true"><span class="octicon octicon-link"></span></a>YOURLS</h3>
 <p>For larger beacon deployments, we recommend using a URL shortener that enables you to later edit the destination URL. Many Eddystone certified <a href="https://developers.google.com/beacons/">beacon manufacturers</a> include their own URL management solutions. In addition, we’ve included below a few well known URL shorteners that offer editing of the destination URL -- note that it is not meant to be an exhaustive list:</p>
 <ul>
   <li><a href="http://tiny.cc/">tiny.cc</a></li>
