@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>How to Try The Physical Web on Chrome</title>
+  <title>The Physical Web</title>
   <meta name="description" content="">
 
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -46,7 +46,7 @@
   <div class="row">
     <div id="sidenav">
       <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#setting-up-physical-web-in-chrome">Setting up Physical Web in Chrome</a></li>
+<li class="toc-entry toc-h1"><a href="#setting-up-physical-web-in-chrome">Setting up Physical Web in Chrome</a></li>
 <li class="toc-entry toc-h2"><a href="#ios">iOS</a></li>
 <li class="toc-entry toc-h2"><a href="#android">Android</a></li>
 <li class="toc-entry toc-h2"><a href="#potential-issues">Potential issues</a></li>
@@ -55,8 +55,8 @@
     <div class="main">
       <div class="container">
         <div class="content">
-          <h2>
-<a id="setting-up-physical-web-in-chrome" class="anchor" href="#setting-up-physical-web-in-chrome" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting up Physical Web in Chrome</h2>
+          <h1>
+<a id="setting-up-physical-web-in-chrome" class="anchor" href="#setting-up-physical-web-in-chrome" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting up Physical Web in Chrome</h1>
 <p>The Physical Web enables you to discover web pages associated with everyday objects and locations. It is powered by bluetooth low energy (BLE) beacons that broadcast URLs using the Eddystone format. Various mobile browsers are working to display these URLs. This document explains how to use the Physical Web on Chrome.
 
 </p><p>If you experience any issues with this setup process, reach out to <a href="mailto:physical-web-discuss@googlegroups.com">physical-web-discuss@googlegroups.com</a>.</p>
@@ -129,7 +129,7 @@
     <p>It’s possible there aren’t any BLE beacons nearby. If you have a compatible Nexus device (Nexus 6, Nexus 9, Galaxy Note 4, Galaxy S6, Galaxy Tab S), you can create a virtual beacon using the <a href="https://play.google.com/store/apps/details?id=com.uriio">Beacon Toy app.</a> Otherwise, consider setting up your own beacon.</p>
 
     <p>Additionally, nearby broadcasted URLs must be public. The URL will be accessed by a Google service to resolve the URL and retrieve page metadata. If the page is not accessible from the Internet (for instance, it requires authentication or is only accessible from an internal network) then it will not appear in the list of results.</p>
-    
+
     <p>Finally, all URLs must resolve to an HTTPS URL. For our users’ security, we require all Physical Web pages be served over HTTPS. You may use a URL shortener that generates HTTP URLs as long as the shortened URL resolves to an HTTPS URL.</p>
   </li>
   <li>
